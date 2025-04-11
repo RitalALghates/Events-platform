@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>منصة الفعاليات</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script>
+    function updateDateTime() {
+      const date = new Date();
+      const options = { 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric', 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        second: '2-digit', 
+        hour12: true 
+      };
+      const dateTimeString = date.toLocaleString('ar-SA', options);
+      document.getElementById('current-date-time').innerText = dateTimeString;
+    }
+    setInterval(updateDateTime, 1000);  // تحديث الوقت كل ثانية
+    window.onload = updateDateTime;  // تحديث الوقت عند تحميل الصفحة
+  </script>
+</head>
+<body>
+  <header>
+    <h1>منصة الفعاليات</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="events.html">الفعاليات</a></li>
+        <li><a href="about.html">حول</a></li>
+        <li><a href="contact.html">تواصل</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Clock Section Above Main -->
+  <div id="date-time-container" style="text-align: left; padding: 10px; font-size: 18px;">
+    <p id="current-date-time"></p>
+  </div>
+
+  <main>
+    <!-- Section for Featured Events -->
+    <section id="featured-events">
+      <h2>الفعاليات المميزة</h2>
+      <div class="event-card">
+        <img src="فعالية مميزة 1.jpg.jpeg" alt="فعالية 1"/>
+        <div class="event-info">
+          <h3>فعالية مميزة 1</h3>
+          <p>تاريخ: 1 ابريل 2025</p>
+          <p>المكان: مركز المعارض</p>
+          <button>احجز الآن</button>
+        </div>
+      </div>
+      <div class="event-card">
+        <img src="فعالية2.png" alt="فعالية 2"/>
+        <div class="event-info">
+          <h3>فعالية مميزة 2</h3>
+          <p>تاريخ: 25 مايو 2025</p>
+          <p>المكان: قاعة الملك عبد الله</p>
+          <button>احجز الآن</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section for Event Search -->
+    <section id="search">
+      <h2>ابحث عن فعالية</h2>
+      <input type="text" id="search-box" placeholder="ابحث عن الفعالية المفضلة لديك"/>
+      <button>بحث</button>
+    </section>
+
+    <!-- Section for Reviews -->
+    <section id="reviews">
+      <h2>آراء الزوار</h2>
+      <div class="review">
+        <p>"كانت الفعالية رائعة! التنظيم ممتاز والمكان رائع. أوصي بها للجميع!"</p>
+        <span>- أحمد</span>
+      </div>
+      <div class="review">
+        <p>"استمتعت بكل لحظة! تجربة لا تُنسى."</p>
+        <span>- سارة</span>
+      </div>
+    </section>
+
+    <!-- Section for Upcoming Events -->
+    <!-- <section id="coming-events">
+      <h2>فعاليات قادمة</h2>
+      <div class="banner">
+        <img src="EVENT COME.jpeg" alt="فعالية قادمة" height="500" width="800"/>
+        <p>استعد للفعاليات الكبرى في الصيف! لا تفوت الفرصة!</p>
+        <button>اعرف المزيد</button>
+      </div>
+    </section> -->
+    
+<!-- Section for Upcoming Events -->
+<section id="coming-events">
+  <h2>فعاليات قادمة</h2>
+  <div class="banner">
+    <img src="EVENT COME.jpeg" alt="فعالية قادمة" />
+    <p>استعد للفعاليات الكبرى في الصيف! لا تفوت الفرصة!</p>
+    <button>اعرف المزيد</button>
+  </div>
+</section>
+
+    <!-- Section for Newsletter Signup -->
+    <section id="newsletter">
+      <h2>اشترك في النشرة البريدية</h2>
+      <input type="email" placeholder="أدخل بريدك الإلكتروني"/>
+      <button>اشترك</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 منصة الفعاليات - جميع الحقوق محفوظة</p>
+  </footer>
+</body>
+</html>
